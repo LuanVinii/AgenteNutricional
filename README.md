@@ -8,7 +8,7 @@ A aplicação é estruturada em módulos que se integram para prover análise e 
 
 - main.py: Ponto de entrada do sistema. Responsável por inicializar o banco de dados, carregar os dados de um arquivo CSV e iniciar a interface de linha de comando (CLI).
 
-- database.py (AlimentoRepository): Camada de persistência. Gerencia a conexão com o banco de dados (SQLite), cria o esquema e as tabelas, e fornece métodos para buscar dados nutricionais e regras de classificação.
+- database.py (AlimentoRepository): Camada de persistência. Gerencia a conexão com o banco de dados (SQLite) utilizando SQLAlchemy como Object-Relational Mapper (ORM). É responsável por criar o esquema e as tabelas, e fornece métodos para buscar dados nutricionais e regras de classificação.
 
 - agente.py (AgenteDeRisco): O núcleo de inteligência. Implementa a lógica condicional (IF-THEN) que compara os nutrientes dos alimentos com limiares de classificação (sódio, gordura saturada, fibra, etc.) para atribuir a cor de risco final.
 
